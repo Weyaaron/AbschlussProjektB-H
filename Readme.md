@@ -10,3 +10,6 @@ Stack : HTML CSS JavaScript , PHP mit localhost, SQLite
 3. mit Browser index.html aufrufen 
 4. Bestellbutton clicken  um Bestellung abzugeben 
 
+5. in setup.php SQL queries anlegen  
+
+ToDO : an dem Autoincrement setup weiter basteln 
