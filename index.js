@@ -1,15 +1,20 @@
-console.log("Hallo Welt");
+document.addEventListener("DOMContentLoaded", async (event) => {
+  console.log("Request send");
 
-let x = await fetch("./api/menu.php");
+  const url = " http://localhost:8000/api/menu.php";
+  let menuItemsAsJson;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
 
+    menuItemsAsJson = await response.json();
 
+    console.log("Request processed");
+  } catch (error) {
+    console.error(error.message);
+  }
 
-    const new_data = async () => {
-        const RESPONSE = await fetch("./api/menu.php");
-
-        if (!RESPONSE.ok) console.log("Error fetching data");
-        const countriesDataUnsorted = await RESPONSE.json();
-
-    };
-
-console.log(x);
+  console.log(menuItemsAsJson);
+});
