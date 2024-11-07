@@ -2,7 +2,7 @@
 
 $db = new SQLite3('./orders.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 
-$stmt1 = $db->prepare('create table menuItem(id integer primary key, name varchar(100), description varchar(255), price double)'); // TODO: SQL query
+$stmt1 = $db->prepare('create table menuItem(id integer primary key, name varchar(100), description varchar(255), price decimal)'); // TODO: SQL query
 $result = $stmt1->execute();
 
 $stmt2 = $db->prepare('create table orders(id integer primary key, created timestamp current_timestamp)');

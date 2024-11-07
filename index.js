@@ -17,4 +17,14 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   }
 
   console.log(menuItemsAsJson);
+
+  let container = document.getElementById('innerDiv');
+  // document.getElementsByTagName('div');
+  // document.querySelectorAll('ul li');
+  // let other = document.createElement('div');
+  // element.innerHTML = '';
+  // element.appendChild(other);
+
+  console.log(container);
+  container.innerHTML = menuItemsAsJson[1].name;
 });
