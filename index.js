@@ -18,19 +18,22 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
   console.log(menuItemsAsJson);
 
-  let container = document.getElementById('innerDiv');
+  let container = document.getElementById("innerDiv");
   let button = document.getElementById("btn");
   let input = document.getElementById("inputId");
-  
-  button.addEventListener("click", async () =>{ console.log("Button clicked.")  
-    let userChoice = input.value
-    console.log(userChoice)
-    const response = await fetch("http://localhost:8000/api/orders.php", {
-        method: "POST",        
-        body: JSON.stringify({ id: userChoice }),
-      });
 
-   } )
+  button.addEventListener("click", async () => {
+    console.log("Button clicked.");
+    let userChoice = input.value;
+    console.log(userChoice);
+    const request = await fetch("http://localhost:8000/api/orders.php", {
+      method: "POST",
+      body: JSON.stringify({ id: userChoice }),
+    });
+
+    const result = await request.text();
+    console.log(result);
+  });
 
   console.log(container);
   container.innerHTML = menuItemsAsJson[1].name;
