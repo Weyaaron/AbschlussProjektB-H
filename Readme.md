@@ -13,3 +13,5 @@ Stack : HTML CSS JavaScript , PHP mit localhost, SQLite
 5. in setup.php SQL queries anlegen  
 
 TODO: Schleife für container.innerHtml in index.js
+TODO: Endpoint programmieren (orders.php)
+TODO: klarere Eingabe der Eissorten

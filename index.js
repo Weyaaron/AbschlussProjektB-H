@@ -19,11 +19,18 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   console.log(menuItemsAsJson);
 
   let container = document.getElementById('innerDiv');
-  // document.getElementsByTagName('div');
-  // document.querySelectorAll('ul li');
-  // let other = document.createElement('div');
-  // element.innerHTML = '';
-  // element.appendChild(other);
+  let button = document.getElementById("btn");
+  let input = document.getElementById("inputId");
+  
+  button.addEventListener("click", async () =>{ console.log("Button clicked.")  
+    let userChoice = input.value
+    console.log(userChoice)
+    const response = await fetch("http://localhost:8000/api/orders.php", {
+        method: "POST",
+        // ...
+      });
+
+   } )
 
   console.log(container);
   container.innerHTML = menuItemsAsJson[1].name;
