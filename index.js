@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     let userChoice = input.value
     console.log(userChoice)
     const response = await fetch("http://localhost:8000/api/orders.php", {
-        method: "POST",
-        // ...
+        method: "POST",        
+        body: JSON.stringify({ id: userChoice }),
       });
 
    } )
