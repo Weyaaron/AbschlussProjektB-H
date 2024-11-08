@@ -1,17 +1,18 @@
 # Eisdiele Abschluss Project
 
-ein Basic Full Stack Project um Frontend Backend & Datenbanken zu verknüpfen
-Stack : HTML CSS JavaScript , PHP mit localhost, SQLite   
+Ein Basic Full Stack Project um Frontend Backend & Datenbanken zu verknüpfen
 
+# Stack
+- HTML CSS JavaScript
+- PHP
+- SQLite
 
 ## Vorgehensweise
-1. Setup PHP ausführen 
-2. "PHP -S localhost:8000"  um den Entwicklungsserver zu starten
-3. mit Browser index.html aufrufen 
-4. Bestellbutton clicken  um Bestellung abzugeben 
+1. Setup PHP ausführen.
+2. "PHP -S localhost:8000" um den Entwicklungsserver zu starten.
+3. mit Browser index.html aufrufen.
+4. Bestellbutton klicken um Bestellung abzugeben.
 
-5. in setup.php SQL queries anlegen  
+Für Todos siehe Github-Issues.
 
-TODO: Schleife für container.innerHtml in index.js
-TODO: Endpoint programmieren (orders.php)
-TODO: klarere Eingabe der Eissorten
+Ein Projekt von Aaron Wey, David Sieke, Ines Link, Martina Sophie Pankow.
