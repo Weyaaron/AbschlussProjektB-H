@@ -7,17 +7,61 @@
         <title>Eisdiele</title>
     </head>
     <body>
-        <h1>Eisdiele</h1>
+        <h1><u><center>Eisdiele</center></u></h1>
         <div id="example">
             <div id="innerDiv"></div>
 
+            <h3>Wähle deine Eissorten und Mengen:</h3>
             <ul>
-                <li>Vanille</li>
-                <li>Erdbeer</li>
-                <li>Schokolade</li>
-                <input type="number" id="inputId" />
-                <button id="btn">Senden</button>
+                <li>
+                    <input type="checkbox" id="vanille" name="eissorte" value="Vanille" />
+                    <label for="vanille">Vanille</label>
+                    <select id="vanilleMenge" name="vanilleMenge" disabled>
+                        <option value="0">0 Kugeln</option>
+                        <option value="1">1 Kugel</option>
+                        <option value="2">2 Kugeln</option>
+                        <option value="3">3 Kugeln</option>
+                        <option value="4">4 Kugeln</option>
+                        <option value="5">5 Kugeln</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="checkbox" id="erdbeer" name="eissorte" value="Erdbeer" />
+                    <label for="erdbeer">Erdbeer</label>
+                    <select id="erdbeerMenge" name="erdbeerMenge" disabled>
+                        <option value="0">0 Kugeln</option>
+                        <option value="1">1 Kugel</option>
+                        <option value="2">2 Kugeln</option>
+                        <option value="3">3 Kugeln</option>
+                        <option value="4">4 Kugeln</option>
+                        <option value="5">5 Kugeln</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="checkbox" id="schokolade" name="eissorte" value="Schokolade" />
+                    <label for="schokolade">Schokolade</label>
+                    <select id="schokoladeMenge" name="schokoladeMenge" disabled>
+                        <option value="0">0 Kugeln</option>
+                        <option value="1">1 Kugel</option>
+                        <option value="2">2 Kugeln</option>
+                        <option value="3">3 Kugeln</option>
+                        <option value="4">4 Kugeln</option>
+                        <option value="5">5 Kugeln</option>
+                    </select>
+                </li>
             </ul>
+
+            <h3><u>Waffel oder Becher</u></h3>
+            <label>
+                <input type="radio" name="servierart" value="Waffel" checked />
+                Waffel
+            </label>
+            <label>
+                <input type="radio" name="servierart" value="Becher" />
+                Becher
+            </label>
+
+            <button id="btn">Bestellung abgeben</button>
         </div>
     </body>
 </html>
