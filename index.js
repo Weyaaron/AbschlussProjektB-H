@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async (event) => {
-  console.log("Request send");
+  console.log("Request succesfully send");
 
   const url = " http://localhost:8000/api/menu.php";
   let menuItemsAsJson;
