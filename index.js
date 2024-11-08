@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   button.addEventListener("click", async () => {
     console.log("Button clicked.");
     let btn = document.getElementById("btn");
-    // let userChoice = input.value;
-    let userChoice = 55;
+    let userChoice = input.value;
+   
     console.log(userChoice);
     /* Bei "Klick" erscheint eine Nachricht, dass die Bestellung angekommen ist */
     document.getElementById("thxOrder").innerHTML = "Danke für Ihre Bestellung"
     const request = await fetch("http://localhost:8000/api/orders.php", {
       method: "POST",
-      body: JSON.stringify({ quantity: userChoice }), // id durch quantity ersetzt, weil ich keine Ahnung habe, was ich hier tue
+      body: JSON.stringify({ quantity: userChoice, id: userChoice })
     });
 
     const result = await request.text();
