@@ -24,8 +24,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
   button.addEventListener("click", async () => {
     console.log("Button clicked.");
+    let btn = document.getElementById("btn");
     let userChoice = input.value;
     console.log(userChoice);
+    /* Bei "Klick" erscheint eine Nachricht, dass die Bestellung angekommen ist */
+    document.getElementById("thxOrder").innerHTML = "Danke für Ihre Bestellung"
     const request = await fetch("http://localhost:8000/api/orders.php", {
       method: "POST",
       body: JSON.stringify({ id: userChoice }),
@@ -34,7 +37,6 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     const result = await request.text();
     console.log(result);
   });
-
   console.log(container);
   container.innerHTML = menuItemsAsJson[1].name;
 });
