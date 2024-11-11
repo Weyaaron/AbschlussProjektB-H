@@ -9,7 +9,7 @@ Ein Basic Full Stack Project um Frontend Backend & Datenbanken zu verknüpfen
 
 ## Vorgehensweise
 1. Setup PHP ausführen.
-2. "PHP -S localhost:8000" um den Entwicklungsserver zu starten.
+2. "php -S localhost:8000" um den Entwicklungsserver zu starten.
 3. mit Browser index.html aufrufen.
 4. Bestellbutton klicken um Bestellung abzugeben.
 
