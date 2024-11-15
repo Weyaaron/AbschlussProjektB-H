@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         console.log(userChoice);
         /* Bei "Klick" erscheint eine Nachricht, dass die Bestellung angekommen ist */
         document.getElementById("thxOrder").innerHTML = "Danke für Ihre Bestellung";
+
         const request = await fetch("http://localhost:8000/api/orders.php", {
             method: "POST",
             body: JSON.stringify({ id: userChoice }),
@@ -37,23 +38,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         const result = await request.text();
         console.log(result);
     });
-    
-    console.log(container);
-    /* erster Versuch  */
-    //container.innerHTML = menuItemsAsJson[1].name + " " + menuItemsAsJson[1].price + "</br>";
+        console.log(container);
+        /* erster Versuch  */
+        //container.innerHTML = menuItemsAsJson[1].name + " " + menuItemsAsJson[1].price + "</br>";
 
+        for (let i of menuItemsAsJson) {
+            iceCreamItem = i;
+            container.innerHTML =
+                container.innerHTML + iceCreamItem.name + iceCreamItem.price + "</br>";
+        }
+        // document.getElementById("innerDiv").innerHTML = iceCreamItem
+    });
 
-    for (let i of menuItemsAsJson) {
-        iceCreamItem = i;
-            container.innerHTML = container.innerHTML + iceCreamItem.name + iceCreamItem.price + "</br>";
-    }
-    // document.getElementById("innerDiv").innerHTML = iceCreamItem
-
-
-
-
-
-
-
-
-});

@@ -13,7 +13,7 @@ $result = $stmt->execute();
 
 $order_id = $db->lastInsertRowID();
 $menu_item_id = $data->id;
-$quantity = 4;
+$quantity = $data->quantity;
 
 for ($menu_item_id = 1; $menu_item_id < 4; $menu_item_id++) {
     $stmt2 = $db->prepare('INSERT INTO orderItems ("order_id", "menu_item_id", "quantity") VALUES (:order_id, :menu_item_id, :quantity)'); // einzelne Einträge in orderItems, order_Id bleibt dieselbe
