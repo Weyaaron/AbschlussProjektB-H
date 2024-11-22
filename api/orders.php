@@ -1,15 +1,16 @@
 <?php
 
-$db = new SQLite3('./../orders.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+require_once 'utils.php';
 
 function get_post_data() {
     return json_decode(file_get_contents('php://input'));
     }
 
+$db = new SQLite3('./orders.db', SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
 $data = get_post_data();
 
-$stmt = $db->prepare('INSERT INTO orders(created) VALUES (CURRENT_TIMESTAMP)');
-$result = $stmt->execute();
+
+execute_sql('INSERT INTO orders(created) VALUES (CURRENT_TIMESTAMP)');
 
 $order_id = $db->lastInsertRowID();
 $menu_item_id = $data->id;
@@ -23,7 +24,7 @@ for ($menu_item_id = 1; $menu_item_id < 4; $menu_item_id++) {
 
 
     $result = $stmt2->execute();
-} 
+}
 
 // Idee dahinter:  - menuItems werden pro Bestellung durchiteriert und hinzugefügt
 //                 - es gibt derzeit 3 menuItems (Vanille, Schoko, Erdbeere), Schleife ist beendet, wenn die Ids der Eissorten durch sind
