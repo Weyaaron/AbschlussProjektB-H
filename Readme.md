@@ -3,11 +3,13 @@
 Ein Basic Full Stack Project um Frontend Backend & Datenbanken zu verknüpfen.
 
 # Stack
-- HTML CSS JavaScript
-- PHP
-- SQLite
+
+-   HTML CSS JavaScript
+-   PHP
+-   SQLite
 
 ## Vorgehensweise
+
 1. Setup PHP ausführen.
 2. "php -S localhost:8000" um den Entwicklungsserver zu starten.
 3. mit Browser index.html aufrufen.
@@ -46,13 +48,14 @@ ihn eröffnet hat.
 
 Ein Review sollte diese Dinge beinhalten:
 
-- Eine Sache die gut ist
-- Eine Sache die verbessert werden könnte
+-   Eine Sache die gut ist
+-   Eine Sache die verbessert werden könnte
 
 Die Person die reviewt kann entscheiden
 ob ein Änderungswunsch Vorraussetzung für ein
 Approve ist oder ob ein neues Issue erstellt wird.
 
 Wichtige Checks könnten sein:
-- Ist die Änderung geignet das Issue vollständig zu lösen?
-- Ist die Änderung so lokal wie möglich?
+
+-   Ist die Änderung geignet das Issue vollständig zu lösen?
+-   Ist die Änderung so lokal wie möglich?
