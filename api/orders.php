@@ -33,5 +33,13 @@ foreach ($data->order_data as $entry) { // $entry sind die einzelnen Objekte ...
     $result = $stmt2->execute();
 }
 
+$allOrders = [];
+$stmtGet = $db->prepare('SELECT * FROM orderItems');
+$list = $stmtGet->execute();
+while($row = $list->fetchArray(SQLITE3_ASSOC)) {
+    array_push($allOrders, $row);
+}
+
+echo json_encode($allOrders);
 // Prepared-Statements schützen vor SQL-Injection, indem sie verhindern, dass Eintragungen als SQL-Code gelesen werden können. Sie werden als reine Daten eingetragen.
 
